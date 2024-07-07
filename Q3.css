@@ -1,0 +1,363 @@
+ /* code for hover changing header color*/
+ .header:hover > .header.letter,.header:hover {
+    fill:#0b2149;
+    background-color: white;
+    color:#1865f2;
+}
+svg:hover .letter{
+    fill:#1865f2;
+}
+.header:not(:hover) > .header.letter,.header:not(:hover){
+    fill: #ffffff;
+}
+.searchbar :hover{
+    background-color: rgb(140, 140, 138);
+    color: rgb(87, 84, 84);
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    margin:0px;
+    display: block;
+}
+
+.header{
+    grid-area: header;
+    color:white;
+    background-color: #0b2149;
+    display :flex;
+    font-style: bold; 
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    padding-left: 8%;
+    padding-right:0px;
+   
+}
+.header-icons-small{
+    display:none;
+}
+.app-icon{
+    flex: 45%;
+    padding: 10px;
+    color: inherit;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.courses-header{
+    flex: 5%;
+    height:40px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-right: 10px;
+    color: inherit;
+    background-color: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-family: Lato, "Noto Sans", sans-serif !important;
+    font-style: bold ;
+    font-weight: bolder; 
+    text-align: center;
+    font-size: 16px;
+}
+
+.searchbar-container{
+    display: flex;
+    flex :10%;
+    height:40px;
+    border-radius: 10px;
+    background-color :inherit;
+    color:inherit;
+    border: none;
+    padding: 10px;
+    
+}
+
+.searchbar{
+    height:35px;
+    width:80%;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    
+}
+
+.search-btn{
+    height:37px;
+    width:20%;
+    background-color: inherit;
+    color:inherit;
+    border: none;
+}
+.small-screen-btn{
+    height:50px;
+    width:50px;
+    background-color: inherit;
+    color:inherit;
+    border: none;
+}
+
+.header-btn{
+    flex:30%;
+    float:right;
+}
+
+.donation-login-signup-btn{
+    background-color: inherit;
+    padding: 10px;
+    margin-right: 20px;
+    padding-top: 20px;
+    color:inherit;
+    font-family: Lato, "Noto Sans", sans-serif !important;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    height:40px;
+    width:80px;
+    border:none;
+}
+.course-description{
+    grid-area: description;
+    background-color: #0b2149;
+    padding: 20px;
+    padding-left: 8%;
+    padding-bottom: 10px;
+    font-style: bolder;
+    font-family: Lato, "Noto Sans", sans-serif !important;
+    margin:0%;
+    height:100px;
+    margin-top:0.2%;
+}
+
+
+
+ .stickyHeader{
+    display: none;
+    position: fixed;
+    top: 0;
+    color:white;
+    background-color: #0b2149;
+    height : 60px;
+    width:100%;
+    font-style: bold; 
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    padding-left: 8%;
+    padding-right:5%;
+}
+.sticky-content{
+    width:100%;
+    display: flex;
+    height:40px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-right: 10px;
+    color: #ffffff3A;
+    font-family: Lato, "Noto Sans", sans-serif !important;
+    font-style: bold ;
+    font-weight: bolder; 
+    text-align: center;
+    font-size: 16px;
+}
+
+@media only screen and (max-width:840px){
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "cd";
+    }
+    .course-summary{
+        display: none;
+    }
+    .header-icons-small{
+        display: flex;
+        flex-direction: row;
+    }
+    .donation-container{
+        grid-template-rows: 0.5fr 1fr;
+        grid-template-columns: 1fr 0.1fr;
+        grid-template-areas: "leftd cross-btn"
+                             "rightd cross-btn";
+    }
+    .amount-container{
+        flex-direction: column;
+    }
+  
+    .other-givenow-container{
+        flex-direction: column;
+    }
+
+    #give-now-btn{
+        flex:100%;
+    }
+    #other-btn{
+        flex: 100%;
+    }
+    .searchbar-container{
+        display: none;
+    }
+    .courses-header{
+        display: none;
+    }
+    .donation-login-signup-btn{
+        display: none;
+    }
+    .app-icon{
+        float:left;
+    }
+    .search-btn{
+        display: none;
+    }
+}
+
+.CourseSummary{
+
+grid-area:CourseSummary;
+margin-left:20px;
+overflow: auto;
+display: flex;
+width:300px;
+height:500px;
+flex-direction: column;
+
+
+}
+.CoursesList{
+display:grid;
+grid-template-columns: 1fr 3fr ;
+grid-template-areas:"CourseSummary CourseDescription";
+}
+
+.Courses{
+
+grid-area:Courses;
+background-color:  rgb(11, 33, 73);
+
+}
+
+.CourseDescription{
+
+grid-area:CourseDescription;
+display: flex;
+flex-direction: column;
+
+
+
+
+}
+ul.no-bullets {
+list-style-type: none;
+
+}
+
+.EarlyMathReview
+{
+height:200px;
+width:750px;
+margin-top:20px;
+margin-left:20px;
+border:1px solid grey;
+
+
+}
+.col1{
+float:left;
+margin-left:10px;
+}
+.col2{
+float:right;
+margin-right:10px;
+}
+.img{
+margin-left:10px;
+margin-top:10px;
+
+}
+.colum2{
+float:right;
+margin-right:50px;
+}
+
+
+.Kindergarten{
+
+height:180px;
+width:750px;
+margin-top:20px;
+margin-left:20px;
+border:1px solid grey;
+
+
+}
+
+.FirstGrade{
+height:180px;
+width:750px;
+margin-top:20px;
+margin-left:20px;
+border:1px solid grey;
+
+}
+
+.SecondGrade{
+height:200px;
+width:750px;
+margin-top:20px;
+margin-left:20px;
+border:1px solid grey;
+}
+.ThirdGrade{
+height:300px;
+width:750px;
+margin-top:20px;
+margin-left:20px;
+border:1px solid grey;
+}
+.column2{
+float:right;
+margin-right:30px;
+
+}
+.Footer{
+background-color:rgb(11, 33, 73); 
+display:grid;
+grid-template-columns: 2.5fr 1.5fr 1.5fr 2fr ;
+grid-template-areas:"MissionStatement About Contact FooterCourses";
+
+
+}
+.About{
+grid-area:About;
+color:white;
+}
+.MissionStatement{
+grid-area:MissionStatement;
+text-align:center;
+
+}
+.Contact{
+grid-area:Contact;
+}
+.FooterCourses{
+grid-area:FooterCourses;
+
+}
+
+ul.no-bullets1 {
+list-style-type: none;
+color:white;
+}
+
+.Country{
+
+background-color:rgb(11, 33, 73);
+}
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+}
